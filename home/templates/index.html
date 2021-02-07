@@ -1,0 +1,15 @@
+<h1>Hola, Soy Raimundo Herrera!</h1>
+<h2>Y esta es mi página con algunos links útiles. No pretendo describirte quien soy, si llegaste acá asumo que me conoces o sabes quien soy, así que algunas de estas cosas te pueden servir.</h2>
+
+{% if links %}
+  <ul>
+  {% for link in links %}
+    <li>
+      <a href="{{ link.url }}">{{ link.title }}</a>
+      <p>{{ link.description }}</p>
+    </li>
+  {% endfor %}
+  </ul>
+{% else %}
+  <p>No tengo ningún link para mostrarte.</p>
+{% endif %}
