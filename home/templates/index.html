@@ -3,21 +3,22 @@
 {% block title %}Hola 👋🏻{% endblock title %}
 
 {% block content %}
-<h1>Hola 👋🏻, Soy Raimundo Herrera!</h1>
-<h2>Y esta es mi página con algunos links útiles. No pretendo describirte quién soy, si llegaste acá asumo que me conoces o sabes quién soy, así que algunas de estas cosas te pueden servir.</h2>
+<h1>Hola 👋🏻, soy Raimundo Herrera!</h1>
+<h3>Esta es mi página con algunos links útiles. Si llegaste acá asumo que me conoces o sabes quién soy, así que algunas de estas cosas te pueden servir:</h3>
 
 {% if links %}
   <ul>
   {% for link in links %}
     <li>
-      <a href="{{ link.url }}">{{ link.title }}</a>
-      <p>{{ link.description }}</p>
+      <p><a href="{{ link.url }}" target="_blank">{{ link.title }}</a>: {{ link.description }}</p>
     </li>
   {% endfor %}
   </ul>
 {% else %}
   <p>No tengo ningún link para mostrarte por ahora, algo debe haber pasado con mi base de datos 🙃.</p>
 {% endif %}
+
+<hr>
 
 <p>Si me quieres mandar un mail, lo puedes hacer a <a href="mailto:hola@raimundoherrera.com">hola@raimundoherrera.com</a>.</p>
 {% endblock content %}
